@@ -12,9 +12,9 @@ class OdometryCalculator(Node):
         super().__init__('odometry_calculator')
 
         # Parametreler (robot fiziksel özellikleri)
-        self.R = 0.1016  # Tekerlek yarıçapı (m)
+        self.R = 0.08255  # Tekerlek yarıçapı (m)
         self.L = 0.35    # Dingil mesafesi (m)
-        self.dt = 0.005    # Zaman adımı (s)
+        self.dt = 0.025    # Zaman adımı (s)
 
         # Başlangıç pozisyonu
         self.x = 0.0
