@@ -67,6 +67,9 @@ protected:
 
     const uint8_t MAX_SPEED = 0X08;
 
+    // Voltage reading register
+    const uint16_t VOLTAGE_REGISTER = 0x20A1;  // Bus voltage register (0.01V/bit scaling)
+
     /**
      * @brief calculates the crc and stores it in the hex_cmd array, so there is no return value
      */
@@ -192,6 +195,9 @@ public:
 
     int32_t readInt32FromArray(const unsigned char* target_array, int startIndex);
     int16_t readInt16FromArray(const unsigned char* target_array, int startIndex);
+
+    // Voltage reading method
+    float read_voltage();
 };
 
 #endif
